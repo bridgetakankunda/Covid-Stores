@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Covid Stores</title>
+    <!-- Main Bootstrap and Css links -->
+    <link rel="stylesheet" href="/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    
+</head>
+
+<body style="border:2px solid Violet;">
+    <div class="top-nav-bar">
+
+        <div class="search-box">
+            <img width=80vh;,height=100vh;  src="/images/covid.png" alt="" class="logo">
+     </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card-body">
+                        <form action="/addItem" method="POST">
+                            <header class="card-header">
+                                <h1 class="card-title" id="head">Covid Stores</h1>
+                            </header>
+                            <fieldset class="form-group border p-2">
+                                <legend class="w-auto border-primary">Product Information</legend>
+                                <div class="form-group">
+
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="itemName">Item Name: </label>
+                                        <div>
+                                            <input class="form-control" type="text" id="itemName"
+                                                placeholder="Item name">
+                                        </div>
+                                        <br>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="make">Item make: </label>
+                                        <div>
+                                            <input class="form-control" type="text" id="make" placeholder="Make">
+                                        </div>
+                                        <br>
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-control-label" for="entryDate">Date of Entry: </label>
+                                        <div>
+                                            <input class="form-control" type="date" id="entryDate"
+                                                placeholder="Date of Entry">
+                                        </div>
+                                        <br>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-control-label text-md-right" for="category">Category:
+                                        </label>
+
+                                        <select name="category" id="">
+                                            <option value="0">Select Category</option>
+                                            <option value="Appliances"></option>
+                                            <option value="Furniture"></option>
+                                            <option value="Fitness and wellness"></option>
+
+                                        </select>
+                                    </div>
+                                    <br>
+
+                                    <div class="form-group">
+                                        <label class="form-control-label text-md-right" for="serial-number">Serial
+                                            Number:
+                                        </label>
+                                        <div>
+                                            <input class="form-control" type="text" id="serial-number"
+                                                placeholder="Serial Number">
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <div class="form-group">
+                                        <label class="form-control-label text-md-right" for="price">Item price
+                                        </label>
+                                        <div>
+                                            <input class="form-control" type="text" id="price" placeholder="Price">
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <div class="form-group">
+                                        <label class="form-control-label text-md-right" for="initial-pay">Initial Pay:
+                                        </label>
+                                        <div>
+                                            <input class="form-control" type="text" id="prinitial-pay"
+                                                placeholder="Initial Pay">
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <div class="form-group">
+                                        <label class="form-control-label text-md-right" for="pay-interval">Pay Interval:
+                                        </label>
+                                        <div>
+                                            <input class="form-control" type="text" id="pay-interval"
+                                                placeholder="Pay-interval">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label class="form-control-label text-md-right" for="color">Color: </label>
+
+                                        <input type="color" id="color" placeholder="Color">
+                                    </div>
+                                         <br>
+                                    <div class="form-group">
+                                        <label class="form-control-label text-md-right" for="item-desc">Description:
+                                        </label>
+                                        <div>
+                                            <textarea class="form-control" name="item-desc" id="item-desc" cols="30"
+                                                rows="5"></textarea>
+                                        </div>
+
+                                       <br>
+
+                                    <div class="form-group">
+                                        <label class="form-control-label text-md-right" for="num-stock">Number of items in Stock:
+                                        </label>
+                                        <div>
+                                            <input class="form-control" type="text" id="num-stock"
+                                                placeholder="Number in Stock">
+                                        </div>
+                                    </div>
+                                    <br>
+
+
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-warning btn-block" type="submit">Submit</button>
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    <label class="form-control-label text-md-right" for="item-photo">Item Photo:</label>
+                                    <input type="file" id="item-photo" name="item-photo" placeholder="Item Photo">
+                                </div>
+                                <br>
+
+
+                            </fieldset>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!--footer---->
+            <section  class="footer">
+                <div style="background-color:purple" "container tex-center">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h1> Links</h1>
+                            <p><a style="color:black"  href="url">Privacy policy</a></p>
+                            <p><a style="color:black" href="url">Terms of use</a></p>
+                            <p><a style="color:black" href="url">Return policy</a></p>
+                        
+                        </div>
+                        <div class="col-md-3">
+                            <h1>Company</h1>
+                            <div> <a style="color:black"    href="url">About us</a></div>
+                            <div><a style="color:black" href="url">Contact us</a></div>
+                        </div>
+                    </div>
+                </div>    
+
+            </section>
+                
+            
+
+        <script src="/bootstrap/js/bootstrap.js"></script>
+        <script src="/bootstrap/js/popper.min.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+

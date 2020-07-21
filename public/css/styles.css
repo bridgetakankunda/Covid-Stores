@@ -1,0 +1,27 @@
+<style>
+        * {
+            margin: 0 auto;
+        }
+
+        #head {
+            text-align: center;
+            color: purple;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        legend {
+            font-weight: bold;
+
+        }
+       body{
+            text-align: center;
+        }
+
+        body{
+        text-align: center;
+        }
+        
+    </style>
