@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router()
 
 const Customer = require('../models/customerRegModel')
+const Agent = require('../models/salesAgentModel')
 
 const path = require('path');
 // const { read } = require('fs');
@@ -46,6 +47,30 @@ router.get('/customerRegPage', async (req, res) => {
     })
 })
 
+router.get("/agentPage", async (req, res) => {
+  var userlist = await Agent.find();
+  res.render("salesAgentPage", { agents: userlist });
+});
+
+
+
+// User Authentication
+router.post("/", (req, res) => {
+  passport.authenticate("local", (err, user, info) => {
+    console.log("body comming to passport ", req.body);
+
+    if (err) {
+      return next(err);
+    }
+    if (!user) return res.redirect("/?info=" + info);
+
+    req.logIn(user, function (err) {
+      if (err) return next(err);
+      return res.redirect("/customerRegPage");
+    });
+  })(req, res);
+});
+
 // Model to database connection
 router.post('/customerReg', async (req, res) => {
     try {
@@ -57,5 +82,19 @@ router.post('/customerReg', async (req, res) => {
         res.status(404).send('unable to send to the database')
     }
 })
+
+router.post("/agentReg", async (req, res) => {
+  try {
+    const newAgent = new Agent(req.body);
+    await Agent.register(newAgent, req.body.password, (err) => {
+      if (err) throw err;
+      res.redirect("/salesAgentPage");
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(404).send("unable to send to the database");
+  }
+});
+
 
 module.exports = router;

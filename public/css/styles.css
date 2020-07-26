@@ -91,6 +91,7 @@
             text-align: initial;
         }
 
-        #custRegSubmit{
+        #custRegSubmit,
+        #agentRegSubmit{
             background-color:rgb(218, 100, 32);
         }

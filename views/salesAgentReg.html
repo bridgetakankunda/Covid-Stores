@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>covid stores</title>
+    <title>Agent Registration</title>
+    <link rel="icon" href="/images/covid.jpg" sizes="16x16">
+
 
     <!-- Main Bootstrap and Css links -->
     <link rel="stylesheet" href="/bootstrap-4.5.0-dist/css/bootstrap.min.css">
@@ -13,48 +15,84 @@
 
 
 
-<body <div class="container">
-    <div>
-        <img width=80vh;,height=100vh; src="/images/covid.jpg" alt="" class="logo">
-    </div>
-
-    <div class="row">
-        <div class="col ">
-            <h1> Register Sales Agent </h1>
-            <form action="" name="agentReg" class="myForm">
-                <fieldset>
-                    <legend>Sales Agent Details</legend>
-                    <div>
-                        <label for="firstName"> First Name: &nbsp; </label>
-                        <input type="text" name="firstName" id="firstName"><br><br>
-                    </div>
-
-                    <div>
-                        <label for="lastName"> Last Name: &nbsp;</label>
-                        <input type="text" name="lastName" id="lastName"><br><br>
-
-                    </div>
-
-                    <div><label for="employeeID">Employee ID No. &nbsp;</label>
-                        <input type="text" name="employeeID" id="employeeID"><br><br>
-                    </div>
-
-                    <div>
-                        <label for="nationalID">National ID No. &nbsp;</label>
-                        <input type="text" name="nationalID" id="nationalID"><br><br>
-                    </div>
-
-
-                    <input type="Submit" onclick="">
-                </fieldset>
-
-            </form>
+<body>
+    <div class="container">
+        <div>
+            <img width="80vh" ;,height="100vh" ; src="/images/covid.jpg" alt="" class="logo">
         </div>
-      </div>
+
+        <div class="row" id="custReg">
+            <div class="col">
+                <h1> Sales Agent Registration. </h1>
+                <form action="/agentReg" name="agentReg" class="agentReg" method="POST">
+                    <fieldset>
+                        <legend>Please Enter Employee Details</legend>
+                        <div class="form-row">
+                            <div class="form-group col-12">
+                                <label for="firstName">First Name:</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName"
+                                    placeholder="Enter First Name" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-12">
+                                <label for="surName">Surname:</label>
+                                <input type="text" class="form-control" id="surName" name="surName"
+                                    placeholder="Enter Surname" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-12">
+                                <label for="phoneNumber">Phone Number:</label>
+                                <input type="number" class="form-control" id="phoneNumber" name="phoneNumber"
+                                    placeholder="Enter Phone Number" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-12">
+                                <label for="email">Email Address:</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="Enter Email Address">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-12">
+                                <label for="nin">National ID Number:</label>
+                                <input type="text" class="form-control" id="nin" name="nin" placeholder="Enter NIN"
+                                    required>
+                            </div>
+                        </div>
+                         <div class="form-row">
+                             <div class="form-group col-12">
+                                 <label for="address">Physical Address:</label>
+                                 <input type="text" class="form-control" id="address" name="address"
+                                     placeholder="Enter Physical Address" required>
+                             </div>
+                         </div>
+                        <div class="form-row">
+                            <div class="form-group col-12">
+                                <label for="employeeID">Employee ID:</label>
+                                <input type="text" class="form-control" id="employeeID" name="employeeID"
+                                    placeholder="Assign Employee ID" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-12">
+                                <label for="password">Password:</label>
+                                <input type="password" class="form-control" id="password" name="pas"
+                                    placeholder="Assign Password" required>
+                            </div>
+                        </div>
+
+
+
+                        <input type="Submit" id="agentRegSubmit" name="agentRegSubmit" value="Register">
+                    </fieldset>
+
+                </form>
+            </div>
+        </div>
     </div>
-
-    
-
     <footer>@copyright Bridget Akankunda</footer>
     <script src="/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
 </body>

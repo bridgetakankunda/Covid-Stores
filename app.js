@@ -5,8 +5,14 @@ const nodemon = require('nodemon')
 const mongoose = require('mongoose')
 const pug = require('pug')
 const path = require('path')
+const session = require("express-session");
+const passport = require("passport");
+const passportLocalMongoose = require("passport-local-mongoose");
+const connectEnsureLogin = require("connect-ensure-login");
 const bodyParser = require('body-parser') 
-const loginRoutes = require('./routes/loginRoutes')
+const loginRoutes = require('./routes/loginRoutes');
+const Agent = require('./models/salesAgentModel')
+// const { Agent } = require('http');
 
 
 // Database connection
@@ -23,6 +29,23 @@ app.set('view engine','pug');
 app.set('views', './views');
 
 app.use(express.static('public'));
+
+
+// Session setup
+app.use(
+  session({
+    secret: "secret",
+    resave: false,
+    saveUninitialized: false,
+  })
+);
+
+/*  MIDDLEWARE SETUP : PASSPORT */
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(Agent.createStrategy());
+passport.serializeUser(Agent.serializeUser());
+passport.deserializeUser(Agent.deserializeUser());
 
 app.use('/', loginRoutes)
 
