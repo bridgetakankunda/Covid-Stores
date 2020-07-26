@@ -1,27 +1,85 @@
-<style>
-        * {
-            margin: 0 auto;
-        }
 
-        #head {
+        
+       head{
+            font-weight: bold;
             text-align: center;
-            color: purple;
+            font-family: Arial, Helvetica,;
+            line-height: 0rem;
+            font-size: medium;
+            color:rgb(218, 100, 32);
+
         }
 
         label {
             font-weight: bold;
+            width: -10px;
+
+            
         }
 
         legend {
             font-weight: bold;
+            background-color: gray;
+            padding: 15px 30px;
+            color:rgb(218, 100, 32);
+            text-align: center;
 
         }
        body{
             text-align: center;
+            font-family: Arial, Helvetica,;
+            line-height: 0rem;
+            font-size: medium;
+            color: grey;
+        }
+        /* input , select{
+            font-family: Arial, Helvetica,;
+            line-height: 0rem;
+            font-size: medium;
+            color: grey;
+            width: 51%;
+            text-align: center;
+
+        } */
+        #login-all{
+            padding-top: 20%;
+            padding-right: 30px;
+            padding-left: 30px;
+
         }
 
-        body{
-        text-align: center;
+        .form-row{
+            font-family: Arial, Helvetica,;
+            font-size: medium;
+            color: grey;
+            flex: auto;
+        }
+
+        footer{
+            text-align: right;
+        }
+
+        /* input {
+            width: 51%;
+            padding: 15px 40px;
+            margin: 15px 0px;
+            box-sizing: border-box;
+        } */
+
+        #alert{
+            background-color:whitesmoke;
+            color: rgb(218, 100, 32);
+        }
+
+        #custReg input{
+            width: 60%;
+            padding: 15px 30px;
+            margin: 10px 20px;
+            box-sizing: border-box;
         }
         
-    </style>
+        .nav {
+            background-color: whitesmoke;
+            color: rgb(218, 100, 32);
+
+        }

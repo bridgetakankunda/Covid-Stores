@@ -5,71 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covid Stores||Log In</title>
-    <link rel="icon" href="/images/covid.png" sizes="16x16">
+    <link rel="icon" href="/images/covid.jpg" sizes="16x16">
 
     <!-- Main Bootstrap and Css links -->
     <link rel="stylesheet" href="/bootstrap-4.5.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/styles.css">
 </head>
-<style>
-    * {
-        margin: 0 auto;
-    }
 
-    #head {
-        text-align: center;
-        color: purple;
-    }
-
-    label {
-        font-weight: bold;
-    }
-
-    legend {
-        font-weight: bold;
-
-    }
-
-    body {
-        text-align: center;
-    }
-
-
-</style>
 
 <body>
 
     <!-- Container holding the image and the login form -->
     <di>
-        <div class="row">
+        <div class="row" >
             <!-- Col holding the image -->
             <div class="col-7">
-                <img width=2px; height=100px; src="/images/covid.png" alt="COVID STORE LOGO" srcset="">
+                <img width=98%; height=100%; src="/images/covid.jpg" alt="COVID STORE LOGO" srcset="">
             </div>
             <!-- Col holding the login form -->
-            <div class="col-5">
+            <div class="col-5"id="login-all">
                 <div class="form-row">
-                    <form action="/" method="POST">
+                    <form action="/login" method="POST">
+                        <h1>Login Here</h1>
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="username">Username</label>
+                                <!-- <label for="username">Username</label> -->
                                 <input type="text" class="form-control" name="username" id="username"
-                                    placeholder="Please enter user name" required>
+                                    placeholder=" user name" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="password">Password</label>
+                                <!-- <label for="password">Password</label> -->
                                 <input type="password" class="form-control" name="password" id="password"
-                                    placeholder="Please enter given Password" required>
+                                    placeholder="Password" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
-                                <input type="submit" class="form-control" name="loginSubmit" id="loginSubmit"
+                                <input style="background-color:rgb(218, 100, 32);"     type="submit" class="form-control" name="loginSubmit" id="loginSubmit"
                                     value="Log In">
                             </div>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+
                         </div>
+                        <div class="alert alert-info" id="alert">
+                            <strong>Stay home Stay safe.Wash your hands with soap and water</strong> 
+                        </div>
+
                     </form>
 
                 </div>

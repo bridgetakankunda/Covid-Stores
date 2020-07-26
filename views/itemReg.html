@@ -9,25 +9,24 @@
     
 </head>
 
-<body style="border:2px solid Violet;">
-    <div class="top-nav-bar">
+<body>
+    <div>
 
-        <div class="search-box">
-            <img width=80vh;,height=100vh;  src="/images/covid.png" alt="" class="logo">
+        <div>
+            <img width=80vh;,height=100vh;  src="/images/covid.jpg" alt="" class="logo">
      </div>
 
 
-        <div class="container">
+        <div class="container" id="item-Reg">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="card-body">
+                <div class="card-body">
+                <div class="col-md-12">
                         <form action="/addItem" method="POST">
                             <header class="card-header">
                                 <h1 class="card-title" id="head">Covid Stores</h1>
                             </header>
-                            <fieldset class="form-group border p-2">
-                                <legend class="w-auto border-primary">Product Information</legend>
-                                <div class="form-group">
+                            <fieldset>
+                                <legend>Product Information</legend>
 
                                     <div class="form-group">
                                         <label class="form-control-label" for="itemName">Item Name: </label>
@@ -38,10 +37,11 @@
                                         <br>
                                     </div>
 
-
+jh
                                     <div class="form-group">
-                                        <label class="form-control-label" for="make">Item make: </label>
+                                        
                                         <div>
+                                            <label class="form-control-label" for="make">Item make: </label>
                                             <input class="form-control" type="text" id="make" placeholder="Make">
                                         </div>
                                         <br>
@@ -60,13 +60,12 @@
                                     <div class="form-group">
                                         <label class="form-control-label text-md-right" for="category">Category:
                                         </label>
-
-                                        <select name="category" id="">
-                                            <option value="0">Select Category</option>
-                                            <option value="Appliances"></option>
-                                            <option value="Furniture"></option>
-                                            <option value="Fitness and wellness"></option>
-
+                                        
+                                        <select name="category" id="category">
+                                            <option value="Appliances">Appliances</option>
+                                            <option value="Foodstuff">Foodstuff</option>
+                                            <option value="Fitness">Fitness</option>
+                                            <option value="Machinery">Machinery</option>
                                         </select>
                                     </div>
                                     <br>
@@ -83,8 +82,7 @@
                                     <br>
 
                                     <div class="form-group">
-                                        <label class="form-control-label text-md-right" for="price">Item price
-                                        </label>
+                                        <label class="form-control-label text-md-right"for="price">Item price</label>
                                         <div>
                                             <input class="form-control" type="text" id="price" placeholder="Price">
                                         </div>
@@ -95,7 +93,7 @@
                                         <label class="form-control-label text-md-right" for="initial-pay">Initial Pay:
                                         </label>
                                         <div>
-                                            <input class="form-control" type="text" id="prinitial-pay"
+                                            <input class="form-control" type="text" id="initial-pay"
                                                 placeholder="Initial Pay">
                                         </div>
                                     </div>
@@ -159,19 +157,20 @@
         </div>
          <!--footer---->
             <section  class="footer">
-                <div style="background-color:purple" "container tex-center">
+                <div style="background-color: grey;" "container tex-center">
                     <div class="row">
                         <div class="col-md-3">
                             <h1> Links</h1>
-                            <p><a style="color:black"  href="url">Privacy policy</a></p>
-                            <p><a style="color:black" href="url">Terms of use</a></p>
-                            <p><a style="color:black" href="url">Return policy</a></p>
+                            <p><a style="color:rgb(218, 100, 32);"  href="url">Privacy policy</a></p>
+                            <p><a style="color:rgb(218, 100, 32);" href="url">Terms of use</a></p>
+                            <p><a style="color:rgb(218, 100, 32);" href="url">Return policy</a></p>
                         
                         </div>
                         <div class="col-md-3">
                             <h1>Company</h1>
-                            <div> <a style="color:black"    href="url">About us</a></div>
-                            <div><a style="color:black" href="url">Contact us</a></div>
+                            <div> <a style="color:rgb(218, 100, 32);"href="url">About us</a></div>
+                            <br>
+                            <div><a style="color:rgb(218, 100, 32);" href="url">Contact us</a></div>
                         </div>
                     </div>
                 </div>    
