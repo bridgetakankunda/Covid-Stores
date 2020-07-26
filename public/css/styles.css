@@ -25,6 +25,7 @@
             text-align: center;
 
         }
+
        body{
             text-align: center;
             font-family: Arial, Helvetica,;
@@ -32,6 +33,7 @@
             font-size: medium;
             color: grey;
         }
+
         /* input , select{
             font-family: Arial, Helvetica,;
             line-height: 0rem;
@@ -82,4 +84,13 @@
             background-color: whitesmoke;
             color: rgb(218, 100, 32);
 
+        }
+
+        form{
+            font-weight: bold;
+            text-align: initial;
+        }
+
+        #custRegSubmit{
+            background-color:rgb(218, 100, 32);
         }

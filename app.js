@@ -1,5 +1,3 @@
-// console.log("hellow world, Node is working")
-
 const express = require('express');
 const app = express();
 
@@ -15,7 +13,7 @@ const loginRoutes = require('./routes/loginRoutes')
 mongoose.connect('mongodb://localhost:27017/Covid_Stores', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }, function (err) {
   if (err) throw err;
   else
-    console.log('You are live on the database');
+    console.log('Connected');
 })
 
 // Middleware
@@ -30,10 +28,10 @@ app.use('/', loginRoutes)
 
 // Error
 app.get('*', (req, res) => { 
-  res.send('erorr page');
+  res.send('error');
   });
 
 // Listening for requests: the server!
-app.listen(3000, () => {
-    console.log(`Listening on port 3000`);
+app.listen(4000, () => {
+    console.log(`Listening on port 4000`);
 });
