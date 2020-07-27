@@ -16,7 +16,7 @@
 <body>
 
     <!-- Container holding the image and the login form -->
-    <di>
+    <div class="container-fluid">
         <div class="row" >
             <!-- Col holding the image -->
             <div class="col-7">
@@ -29,21 +29,21 @@
                         <h1>Login Here</h1>
                         <div class="form-row">
                             <div class="form-group">
-                                <!-- <label for="username">Username</label> -->
-                                <input type="text" class="form-control" name="username" id="username"
-                                    placeholder=" user name" required>
+                                <label for="employeeID">Employee ID</label>
+                                <input type="text" class="form-control" name=employeeID id="employeeID"
+                                    placeholder="Enter Employee ID" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
-                                <!-- <label for="password">Password</label> -->
+                                <label for="password">Password</label>
                                 <input type="password" class="form-control" name="password" id="password"
                                     placeholder="Password" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
-                                <input style="background-color:rgb(218, 100, 32);"     type="submit" class="form-control" name="loginSubmit" id="loginSubmit"
+                                <input type="submit" class="form-control" name="loginSubmit" id="loginSubmit"
                                     value="Log In">
                             </div>
                             <br>

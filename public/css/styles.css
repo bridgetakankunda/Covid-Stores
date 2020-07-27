@@ -50,6 +50,10 @@
 
         }
 
+        #loginSubmit{
+            background-color:rgb(218, 100, 32)
+        }
+
         .form-row{
             font-family: Arial, Helvetica,;
             font-size: medium;

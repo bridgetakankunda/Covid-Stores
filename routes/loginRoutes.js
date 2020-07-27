@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router()
-
+const passport = require('passport');
 const Customer = require('../models/customerRegModel')
 const Agent = require('../models/salesAgentModel')
 
