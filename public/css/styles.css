@@ -25,11 +25,16 @@
             text-align: center;
 
         }
+        
+        #logHeader{
+            text-align: left;
+            color:rgb(218, 100, 32)
+        }
 
        body{
             text-align: center;
             font-family: Arial, Helvetica,;
-            line-height: 0rem;
+            /* line-height: 0rem; */
             font-size: medium;
             color: grey;
         }
@@ -43,14 +48,14 @@
             text-align: center;
 
         } */
-        #login-all{
+        /* #login-all{
             padding-top: 20%;
             padding-right: 30px;
             padding-left: 30px;
 
-        }
+        } */
 
-        #loginSubmit{
+        #submitLogin {
             background-color:rgb(218, 100, 32)
         }
 
@@ -98,4 +103,8 @@
         #custRegSubmit,
         #agentRegSubmit{
             background-color:rgb(218, 100, 32);
+        }
+
+        .logForm{
+            padding: 60px;
         }

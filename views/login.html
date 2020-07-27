@@ -18,40 +18,36 @@
     <!-- Container holding the image and the login form -->
     <div class="container-fluid">
         <div class="row" >
+
             <!-- Col holding the image -->
             <div class="col-7">
                 <img width=98%; height=100%; src="/images/covid.jpg" alt="COVID STORE LOGO" srcset="">
             </div>
+
             <!-- Col holding the login form -->
-            <div class="col-5"id="login-all">
+            <div class="col-5 logForm" >
+                <h1 id="logHeader">Login Here</h1>
                 <div class="form-row">
                     <form action="/login" method="POST">
-                        <h1>Login Here</h1>
+                        <br>
                         <div class="form-row">
-                            <div class="form-group">
+                            <div class="col-12 form-group">
                                 <label for="employeeID">Employee ID</label>
-                                <input type="text" class="form-control" name=employeeID id="employeeID"
-                                    placeholder="Enter Employee ID" required>
+                                <input type="text" class="form-control" id="employeeID" name="employeeID" placeholder="Enter Employee ID" required>
                             </div>
                         </div>
+                        
                         <div class="form-row">
-                            <div class="form-group">
+                            <div class="col-12 form-group">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-control" name="password" id="password"
-                                    placeholder="Password" required>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Enter Your Password"
+                                    required>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="form-group">
-                                <input type="submit" class="form-control" name="loginSubmit" id="loginSubmit"
-                                    value="Log In">
+                            <div class="col-5 form-group">
+                                <input type="submit" class="form-control" id="submitLogin" name="submitLogin" value="Login">
                             </div>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-
                         </div>
                         <div class="alert alert-info" id="alert">
                             <strong>Stay home Stay safe.Wash your hands with soap and water</strong> 
