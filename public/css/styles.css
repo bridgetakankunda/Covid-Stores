@@ -1,45 +1,41 @@
+head {
+    font-weight: bold;
+    text-align: center;
+    font-family: Arial, Helvetica, ;
+    line-height: 0rem;
+    font-size: medium;
+    color: rgb(218, 100, 32);
+}
 
-        
-       head{
-            font-weight: bold;
-            text-align: center;
-            font-family: Arial, Helvetica,;
-            line-height: 0rem;
-            font-size: medium;
-            color:rgb(218, 100, 32);
+label {
+    font-weight: bold;
+    width: -10px;
+    color: black;
+}
 
-        }
+legend {
+    font-weight: bold;
+    background-color: gray;
+    padding: 15px 30px;
+    color: rgb(218, 100, 32);
+    text-align: center;
+    margin-top: 4%;
+}
 
-        label {
-            font-weight: bold;
-            width: -10px;
+#logHeader {
+    text-align: left;
+    color: rgb(218, 100, 32)
+}
 
-            
-        }
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, ;
+    /* line-height: 0rem; */
+    font-size: medium;
+    color: grey;
+}
 
-        legend {
-            font-weight: bold;
-            background-color: gray;
-            padding: 15px 30px;
-            color:rgb(218, 100, 32);
-            text-align: center;
-
-        }
-        
-        #logHeader{
-            text-align: left;
-            color:rgb(218, 100, 32)
-        }
-
-       body{
-            text-align: center;
-            font-family: Arial, Helvetica,;
-            /* line-height: 0rem; */
-            font-size: medium;
-            color: grey;
-        }
-
-        /* input , select{
+/* input , select{
             font-family: Arial, Helvetica,;
             line-height: 0rem;
             font-size: medium;
@@ -48,63 +44,77 @@
             text-align: center;
 
         } */
-        /* #login-all{
+
+/* #login-all{
             padding-top: 20%;
             padding-right: 30px;
             padding-left: 30px;
 
         } */
 
-        #submitLogin {
-            background-color:rgb(218, 100, 32)
-        }
+#submitLogin {
+    background-color: rgb(218, 100, 32)
+}
 
-        .form-row{
-            font-family: Arial, Helvetica,;
-            font-size: medium;
-            color: grey;
-            flex: auto;
-        }
+.form-row {
+    font-family: Arial, Helvetica, ;
+    font-size: medium;
+    color: grey;
+    flex: auto;
+}
 
-        footer{
-            text-align: right;
-        }
+footer {
+    text-align: right;
+}
 
-        /* input {
-            width: 51%;
-            padding: 15px 40px;
-            margin: 15px 0px;
-            box-sizing: border-box;
-        } */
+input {
+    width: 51%;
+    padding: 15px 40px;
+    margin: 15px 0px;
+    box-sizing: border-box;
+}
 
-        #alert{
-            background-color:whitesmoke;
-            color: rgb(218, 100, 32);
-        }
+#alert {
+    background-color: whitesmoke;
+    color: rgb(218, 100, 32);
+}
 
-        #custReg input{
-            width: 60%;
-            padding: 15px 30px;
-            margin: 10px 20px;
-            box-sizing: border-box;
-        }
-        
-        .nav {
-            background-color: whitesmoke;
-            color: rgb(218, 100, 32);
+#custReg input {
+    width: 60%;
+    padding: 15px 30px;
+    margin: 10px 20px;
+    box-sizing: border-box;
+}
 
-        }
+#navbar {
+    background-color: rgb(80, 82, 80);
+    color: rgb(218, 100, 32);
+}
 
-        form{
-            font-weight: bold;
-            text-align: initial;
-        }
+form {
+    font-weight: bold;
+    text-align: initial;
+}
 
-        #custRegSubmit,
-        #agentRegSubmit{
-            background-color:rgb(218, 100, 32);
-        }
+#card, head {
+    color: black;
+}
 
-        .logForm{
-            padding: 60px;
-        }
+#custRegSubmit, #agentRegSubmit, #itemRegSubmit {
+    background-color: rgb(218, 100, 32);
+}
+
+.logForm {
+    padding: 60px;
+}
+
+.error {
+    color: red;
+}
+
+.image content{
+    text-align: left;
+    padding-top: 70px;
+    position: fixed;
+    bottom: 61%;
+}

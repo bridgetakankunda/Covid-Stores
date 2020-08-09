@@ -1,0 +1,48 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Items Available
+    link(rel='stylesheet' href='/bootstrap-4.5.0-dist/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/css/styles.css')
+    
+    body
+
+        br
+        br
+        h2 Available Items
+        br
+            
+
+        table.table.table-hover
+            thead.thead-dark
+                tr
+                    th(scope='col') Item Name
+                    th(scope='col') Item Make
+                    th(scope='col') Serial Number
+                    th(scope='col') Price
+                    th(scope='col') In stock
+                    th(scope='col')
+                    th(scope='col')
+            tbody
+                each item in items
+                    tr
+                        td #{item.itemName}
+                        td #{item.itemMake}
+                        td #{item.serialNumber}
+                        td #{item.itemPrice}
+                        td #{item.numberInStock} 
+                        
+                        td(colspan="2")
+                            form(method="post" action='/updating')
+                                input(type="hidden" name="id"  value=item._id)
+                                button.btn.btn-dark.btn-block(type="submit") Update
+                        td
+                            form(method="post" action='/delete')
+                                input(type="hidden" name="id" value=item._id)
+                                button.btn.btn-dark.btn-block(type="submit") Delete
+
+
+        div#footer
+            footer
+                |  Covid-Stores &copy;2020

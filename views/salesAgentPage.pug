@@ -59,14 +59,14 @@ head
                         td #{agent.address}
                         td #{agent.employeeID}
                         td #{agent.email} 
-                        //- td(colspan="2")
-                        //-     form(method="post" action='/updating')
-                        //-         input(type="hidden" name="id"  value=agent._id)
-                        //-         button.btn.btn-dark.btn-block(type="submit") Update
-                        //- td
-                        //-     form(method="post" action='/delete')
-                        //-         input(type="hidden" name="id" value=agent._id)
-                        //-         button.btn.btn-dark.btn-block(type="submit") Delete
+                        td(colspan="2")
+                            form(method="post" action='/updating')
+                                input(type="hidden" name="id"  value=agent._id)
+                                button.btn.btn-dark.btn-block(type="submit") Update
+                        td
+                            form(method="post" action='/delete')
+                                input(type="hidden" name="id" value=agent._id)
+                                button.btn.btn-dark.btn-block(type="submit") Delete
 
 
         div#footer

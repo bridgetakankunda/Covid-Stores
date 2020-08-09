@@ -3,6 +3,9 @@ const router = express.Router()
 const passport = require('passport');
 const Customer = require('../models/customerRegModel')
 const Agent = require('../models/salesAgentModel')
+const Manager = require('../models/Manager')
+const Item = require('../models/itemModel')
+
 
 const path = require('path');
 // const { read } = require('fs');
@@ -10,6 +13,10 @@ const path = require('path');
 // Main login page
 router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../views', '/login.html'))
+})
+
+router.get('/adminlogin', (req, res) => {
+  res.sendFile(path.join(__dirname, '../views', '/adminlogin.html'))
 })
 
 // router.post('/login', (req, res) => {
@@ -21,14 +28,12 @@ router.get('/agentReg', (req, res) => {
     res.sendFile(path.join(__dirname, '../views', '/salesAgentReg.html'))
 })
 
+router.get('/managerReg', (req, res) => {
+  res.sendFile(path.join(__dirname, '../views', '/managerReg.html'))
+})
 
 router.get('/itemReg', (req, res) => {
     res.sendFile(path.join(__dirname, '../views', '/itemReg.html'))
-})
-
-
-router.get('/purchaseReg', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views', '/purchaseReg.html'))
 })
 
 router.get('/customerReg', (req, res) => {
@@ -49,13 +54,33 @@ router.get('/customerRegPage', async (req, res) => {
 
 router.get("/agentPage", async (req, res) => {
   var userlist = await Agent.find();
-  res.render("salesAgentPage", { agents: userlist });
+  res.render("salesAgentPage", {
+    agents: userlist
+  });
 });
+
+
+router.get("/itemsPage", async (req, res) => {
+  var userlist = await Item.find();
+  res.render("storeItemsPage", {
+    items: userlist
+  });
+});
+
+router.post("/delete", async (req, res) => {
+  try {
+    await Agent.deleteOne({ _id: req.body.id })
+    res.redirect('back')
+  } catch (error) {
+    res.status(400).send("unable to delete to database");
+  }
+})
+
 
 
 
 // User Authentication
-router.post("/", (req, res) => {
+router.post("/login", (req, res) => {
   passport.authenticate("local", (err, user, info) => {
     console.log("body comming to passport ", req.body);
 
@@ -64,12 +89,29 @@ router.post("/", (req, res) => {
     }
     if (!user) return res.redirect("/?info=" + info);
 
-    req.logIn(user, function (err) {
+    req.login(user, function (err) {
       if (err) return next(err);
       return res.redirect("/customerRegPage");
     });
   })(req, res);
 });
+
+router.post("/login_admin", (req, res) => {
+  passport.authenticate("manager-local", (err, user, info) => {
+    console.log("body comming to passport ", req.body);
+
+    if (err) {
+      return next(err);
+    }
+    if (!user) return res.redirect("/?info=" + info);
+
+    req.login(user, function (err) {
+      if (err) return next(err);
+      return res.redirect("/customerRegPage");
+    });
+  })(req, res);
+});
+
 
 // Model to database connection
 router.post('/customerReg', async (req, res) => {
@@ -81,6 +123,17 @@ router.post('/customerReg', async (req, res) => {
         console.log(error);
         res.status(404).send('unable to send to the database')
     }
+})
+
+router.post('/itemReg', async (req, res) => {
+  try {
+    const newItem = new Item(req.body)
+    await newItem.save()
+    res.redirect('/itemsPage')
+  } catch (error) {
+    console.log(error);
+    res.status(404).send('unable to send to the database')
+  }
 })
 
 router.post("/agentReg", async (req, res) => {
@@ -96,5 +149,17 @@ router.post("/agentReg", async (req, res) => {
   }
 });
 
+router.post("/managerReg", async (req, res) => {
+  try {
+    const newManager = new Manager(req.body);
+    await Manager.register(newManager, req.body.password, (err) => {
+      if (err) throw err;
+      res.redirect("/managerPage");
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(404).send("unable to send to the database");
+  }
+});
 
 module.exports = router;

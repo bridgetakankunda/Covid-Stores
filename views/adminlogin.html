@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - Covid Stores</title>
+    <link rel="icon" href="/images/covid.jpg" sizes="16x16">
+
+    <!-- Main Bootstrap and Css links -->
+    <link rel="stylesheet" href="/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+
+<body>
+
+    <!-- Container holding the image and the login form -->
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- Col holding the image -->
+            <div class="col-7">
+                <img width=98%; height=100%; src="/images/covid.jpg" alt="COVID STORE LOGO" srcset="">
+            </div>
+
+            <!-- Col holding the login form -->
+            <div class="col-5 logForm">
+                <h1 id="logHeader">Login Here</h1>
+                <div class="form-row">
+                    <form action="/login_admin" method="POST" name="loginForm" id="loginForm">
+                        <br>
+                        <div class="form-row">
+                            <div class="col-12 form-group">
+                                <label for="managerID">Manager ID</label>
+                                <input type="text" class="form-control" id="managerID" name="managerID"
+                                    placeholder="Enter manager ID" required>
+                                <div class="error" id="errmanagerID"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col-12 form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" name="password"
+                                    placeholder="Enter Your Password" required>
+                                <div class="error" id="errpassword"></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-5 form-group">
+                                <input type="submit" class="form-control" id="submitLogin" name="submitLogin"
+                                    value="Login" onclick="checkInputValue()">
+                            </div>
+                        </div>
+                        <div class="alert alert-info" id="alert">
+                            <strong>Stay home Stay safe.Wash your hands with soap and water</strong>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer>&#169 Bridget Akankunda 2020</footer>
+
+    <!-- Linked Js files -->
+    <script src="/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+    <script src="/js/loginValidation.js"></script>
+</body>
+
+</html>

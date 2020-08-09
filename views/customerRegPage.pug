@@ -7,30 +7,6 @@ head
     link(rel='stylesheet' href='/css/styles.css')
     
     body
-        //- nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
-        //-     a.navbar-brand(href='/supervisor')
-        //-         img(src='/images/boda.png' alt='logo')
-        //-         |  boda boda banja
-        //-     button.navbar-toggler(type='button' data-toggle='collapse' 
-        //-     data-target='#navbarNavDropdown' 
-        //-     aria-controls='navbarNavDropdown' aria-expanded='false' 
-        //-     aria-label='Toggle navigation')
-        //-         span.navbar-toggler-icon
-        //-     .collapse.navbar-collapse#navbarNavDropdown
-        //-         ul.navbar-nav
-        //-             li.nav-item.active
-        //-                 a.nav-link(href='/supervisor')
-        //-                     | Home
-        //-                     span.sr-only (current)
-        //-             li.nav-item
-        //-                 a.nav-link(href='/custreg') New Customer
-        //-             li.nav-item
-        //-                 a.nav-link(href='#') Contacts
-        //-     form.form-inline.my-2.my-lg-0
-        //-         button.btn.btn-outline-success.my-2.my-sm-0#signout
-        //-             a(href='/') Sign Out
-
-
 
         br
         br
@@ -55,14 +31,14 @@ head
                         td #{customer.surName}
                         td #{customer.phoneNumber}
                         td #{customer.address} 
-                        //- td(colspan="2")
-                        //-     form(method="post" action='/updating')
-                        //-         input(type="hidden" name="id"  value=customer._id)
-                        //-         button.btn.btn-dark.btn-block(type="submit") Update
-                        //- td
-                        //-     form(method="post" action='/delete')
-                        //-         input(type="hidden" name="id" value=customer._id)
-                        //-         button.btn.btn-dark.btn-block(type="submit") Delete
+                        td(colspan="2")
+                            //- form(method="post" action='/updating')
+                            //-     input(type="hidden" name="id"  value=customer._id)
+                            //-     button.btn.btn-dark.btn-block(type="submit") Update
+                        td
+                            form(method="post" action='/delete')
+                                input(type="hidden" name="id" value=customer._id)
+                                button.btn.btn-dark.btn-block(type="submit") Delete
 
 
         div#footer

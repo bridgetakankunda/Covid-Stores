@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Registration</title>
+    <link rel="icon" href="/images/covid.jpg" sizes="16x16">
+
+
+    <!-- Main Bootstrap and Css links -->
+    <link rel="stylesheet" href="/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+
+
+<body>
+    <!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <img width=80vh;,height=100vh; src="/images/covid.jpg" alt="" class="logo">
+    <a style="color:rgb(218, 100, 32);font-weight: bolder; font-size: xxx-large; font-family: inherit;" class="nav-link"
+        class="navbar-brand" href="/views/login.html">Covid Stores</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <div style="margin-left: auto; color:rgb(218, 100, 32);" class="dropdown">
+            <button style="color:rgb(218, 100, 32);" class="btn btn-secondary dropdown-toggle" type="button"
+                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Login
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a style="color:rgb(218, 100, 32);" class="dropdown-item" href="/adminlogin">Admin login</a>
+                <a style="color:rgb(218, 100, 32);" class="dropdown-item" href="/">Employee login</a>
+
+            </div>
+        </div>
+
+    </div>
+</nav>
+    <!-- Navbar -->
+    <div style="padding-top: 20px;" class="container">
+
+        <div class="row" id="custReg">
+            <div class="col">
+                <form action="/managerReg" name="managerReg" class="managerReg" id="managerReg" method="POST">
+                    <fieldset>
+                        <legend>Manager Registration</legend>
+                        <div class="form-row">
+                            <div class="form-group col-12">
+                                <label for="firstName">First Name:</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName"
+                                    placeholder="Enter First Name">
+                                <div class="error" id="errfirstName"></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-12">
+                                <label for="surName">Surname:</label>
+                                <input type="text" class="form-control" id="surName" name="surName"
+                                    placeholder="Enter Surname">
+                                <div class="error" id="errsurName"></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-12">
+                                <label for="phoneNumber">Phone Number:</label>
+                                <input type="number" class="form-control" id="phoneNumber" name="phoneNumber"
+                                    placeholder="Enter Phone Number">
+                                <div class="error" id="errphoneNumber"></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-12">
+                                <label for="email">Email Address:</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="Enter Email Address">
+                                <div class="error" id="erremail"></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-12">
+                                <label for="nin">National ID Number:</label>
+                                <input type="text" class="form-control" id="nin" name="nin" placeholder="Enter NIN">
+                                <div class="error" id="errnin"></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-12">
+                                <label for="address">Physical Address:</label>
+                                <input type="text" class="form-control" id="address" name="address"
+                                    placeholder="Enter Physical Address">
+
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-12">
+                                <label for="managerID">Manager ID:</label>
+                                <input type="text" class="form-control" id="managerID" name="managerID"
+                                    placeholder="Assign manager ID">
+                                <div class="error" id="errmanagerID"></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-12">
+                                <label for="password">Password:</label>
+                                <input type="password" class="form-control" id="password" name="password"
+                                    placeholder="Assign Password">
+                                <div class="error" id="errpassword"></div>
+                            </div>
+                        </div>
+
+
+
+                        <input type="Submit" id="managerRegSubmit" name="managerRegSubmit" value="Register"
+                            onClick="checkInputValue()">
+                    </fieldset>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>@copyright Bridget Akankunda</footer>
+    <script src="/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+    <script src="/js/salesAgentValidation.js"></script>
+
+</body>
+
+</html>

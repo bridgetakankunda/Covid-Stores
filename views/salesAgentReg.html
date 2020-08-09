@@ -16,36 +16,61 @@
 
 
 <body>
-    <div class="container">
-        <div>
-            <img width="80vh" ;,height="90vh" ; src="/images/covid.jpg" alt="" class="logo">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <img width=80vh;,height=100vh; src="/images/covid.jpg" alt="" class="logo">
+        <a style="color:rgb(218, 100, 32);font-weight: bolder; font-size: xxx-large; font-family: inherit;" class="nav-link"
+            class="navbar-brand" href="/views/login.html">Covid Stores</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+            <div style="margin-left: auto; color:rgb(218, 100, 32);" class="dropdown">
+                <button style="color:rgb(218, 100, 32);" class="btn btn-secondary dropdown-toggle" type="button"
+                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Login
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a style="color:rgb(218, 100, 32);" class="dropdown-item" href="/adminlogin">Admin login</a>
+                    <a style="color:rgb(218, 100, 32);" class="dropdown-item" href="/">Employee login</a>
+    
+                </div>
+            </div>
+    
         </div>
+    </nav>
+    <!-- Navbar -->
+    <div style="padding-top: 20px;" class="container">
 
         <div class="row" id="custReg">
             <div class="col">
-                <h1> Sales Agent Registration. </h1>
-                <form action="/agentReg" name="agentReg" class="agentReg" method="POST">
+                <form action="/agentReg" name="agentReg" class="agentReg" id="agentReg" method="POST">
                     <fieldset>
-                        <legend>Please Enter Employee Details</legend>
+                        <legend>Sales Agent Registration</legend>
                         <div class="form-row">
                             <div class="form-group col-12">
                                 <label for="firstName">First Name:</label>
                                 <input type="text" class="form-control" id="firstName" name="firstName"
-                                    placeholder="Enter First Name" required>
+                                    placeholder="Enter First Name">
+                                    <div class="error" id="errfirstName"></div>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-12">
                                 <label for="surName">Surname:</label>
                                 <input type="text" class="form-control" id="surName" name="surName"
-                                    placeholder="Enter Surname" required>
+                                    placeholder="Enter Surname">
+                                    <div class="error" id="errsurName"></div>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-12">
                                 <label for="phoneNumber">Phone Number:</label>
                                 <input type="number" class="form-control" id="phoneNumber" name="phoneNumber"
-                                    placeholder="Enter Phone Number" required>
+                                    placeholder="Enter Phone Number">
+                                <div class="error" id="errphoneNumber"></div>
                             </div>
                         </div>
                         <div class="form-row">
@@ -53,40 +78,44 @@
                                 <label for="email">Email Address:</label>
                                 <input type="email" class="form-control" id="email" name="email"
                                     placeholder="Enter Email Address">
+                                    <div class="error" id="erremail"></div>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-12">
                                 <label for="nin">National ID Number:</label>
-                                <input type="text" class="form-control" id="nin" name="nin" placeholder="Enter NIN"
-                                    required>
+                                <input type="text" class="form-control" id="nin" name="nin" placeholder="Enter NIN">
+                                    <div class="error" id="errnin"></div>
                             </div>
                         </div>
                          <div class="form-row">
                              <div class="form-group col-12">
                                  <label for="address">Physical Address:</label>
                                  <input type="text" class="form-control" id="address" name="address"
-                                     placeholder="Enter Physical Address" required>
+                                     placeholder="Enter Physical Address">
+                                  
                              </div>
                          </div>
                         <div class="form-row">
                             <div class="form-group col-12">
                                 <label for="employeeID">Employee ID:</label>
                                 <input type="text" class="form-control" id="employeeID" name="employeeID"
-                                    placeholder="Assign Employee ID" required>
+                                    placeholder="Assign Employee ID">
+                                    <div class="error" id="erremployeeID"></div>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-12">
                                 <label for="password">Password:</label>
                                 <input type="password" class="form-control" id="password" name="password"
-                                    placeholder="Assign Password" required>
+                                    placeholder="Assign Password">
+                                    <div class="error" id="errpassword"></div>
                             </div>
                         </div>
 
 
 
-                        <input type="Submit" id="agentRegSubmit" name="agentRegSubmit" value="Register">
+                        <input type="Submit" id="agentRegSubmit" name="agentRegSubmit" value="Register" onClick="checkInputValue()">
                     </fieldset>
 
                 </form>
@@ -95,6 +124,8 @@
     </div>
     <footer>@copyright Bridget Akankunda</footer>
     <script src="/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+    <script src="/js/salesAgentValidation.js"></script>
+
 </body>
 
 </html>

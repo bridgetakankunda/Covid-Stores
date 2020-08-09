@@ -28,25 +28,26 @@
             <div class="col-5 logForm" >
                 <h1 id="logHeader">Login Here</h1>
                 <div class="form-row">
-                    <form action="/login" method="POST">
+                    <form action="/login" method="POST" name="loginForm" id="loginForm">
                         <br>
                         <div class="form-row">
                             <div class="col-12 form-group">
                                 <label for="employeeID">Employee ID</label>
                                 <input type="text" class="form-control" id="employeeID" name="employeeID" placeholder="Enter Employee ID" required>
+                                <div class="error" id="erremployeeID"></div>
                             </div>
                         </div>
                         
                         <div class="form-row">
                             <div class="col-12 form-group">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password" name="password" placeholder="Enter Your Password"
-                                    required>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Enter Your Password"required>
+                                <div class="error" id="errpassword"></div>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-5 form-group">
-                                <input type="submit" class="form-control" id="submitLogin" name="submitLogin" value="Login">
+                                <input type="submit" class="form-control" id="submitLogin" name="submitLogin" value="Login" onclick="checkInputValue()">
                             </div>
                         </div>
                         <div class="alert alert-info" id="alert">
@@ -68,6 +69,7 @@
 
     <!-- Linked Js files -->
     <script src="/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+    <script src="/js/loginValidation.js"></script>
 </body>
 
 </html>

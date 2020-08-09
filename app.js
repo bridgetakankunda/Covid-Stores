@@ -12,6 +12,7 @@ const connectEnsureLogin = require("connect-ensure-login");
 const bodyParser = require('body-parser') 
 const loginRoutes = require('./routes/loginRoutes');
 const Agent = require('./models/salesAgentModel')
+const Manager = require('./models/Manager')
 // const { Agent } = require('http');
 
 
@@ -47,6 +48,10 @@ passport.use(Agent.createStrategy());
 passport.serializeUser(Agent.serializeUser());
 passport.deserializeUser(Agent.deserializeUser());
 
+passport.use('manager-local',Manager.createStrategy());
+passport.serializeUser(Manager.serializeUser());
+passport.deserializeUser(Manager.deserializeUser());
+
 app.use('/', loginRoutes)
 
 // Error
@@ -55,6 +60,6 @@ app.get('*', (req, res) => {
   });
 
 // Listening for requests: the server!
-app.listen(4000, () => {
-    console.log(`Listening on port 4000`);
+app.listen(4400, () => {
+    console.log(`Listening on port 4400`);
 });
