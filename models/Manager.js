@@ -8,7 +8,7 @@ var managerSchema = new mongoose.Schema({
     email: String,
     address: String,
     nin: String,
-    managerID: {
+    username: {
         type: String,
         active: false
     },
@@ -16,6 +16,6 @@ var managerSchema = new mongoose.Schema({
 })
 
 managerSchema.plugin(passportLocalMongoose, {
-    usernameField: 'managerID'
+    usernameField: 'username'
 });
 module.exports = mongoose.model("Manager", managerSchema)

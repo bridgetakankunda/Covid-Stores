@@ -100,7 +100,7 @@ form {
     color: black;
 }
 
-#custRegSubmit, #agentRegSubmit, #itemRegSubmit {
+#custRegSubmit, #agentRegSubmit, #itemRegSubmit,#managerRegSubmit {
     background-color: rgb(218, 100, 32);
 }
 

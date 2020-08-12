@@ -9,8 +9,8 @@ itemReg.addEventListener('submit', (event) => {
 
     // Retrieving the values of form elements 
     var itemName = document.itemReg.itemName.value;
-    // var itemMake = document.itemReg.itemMake.value;
-    // var serialNumber = document.itemReg.serialNumber.value;
+    var itemMake = document.itemReg.itemMake.value;
+    var serialNumber = document.itemReg.serialNumber.value;
 
     // Defining error variables with a default value
     var erritemName = erritemMake = errSerialNumber = true;

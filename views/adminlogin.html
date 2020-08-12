@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In - Covid Stores</title>
+    <title>Admin Log In - Covid Stores</title>
     <link rel="icon" href="/images/covid.jpg" sizes="16x16">
 
     <!-- Main Bootstrap and Css links -->
@@ -28,14 +28,14 @@
             <div class="col-5 logForm">
                 <h1 id="logHeader">Login Here</h1>
                 <div class="form-row">
-                    <form action="/login_admin" method="POST" name="loginForm" id="loginForm">
+                    <form action="/adminlogin" method="POST" name="adminLoginForm" id="adminLoginForm">
                         <br>
                         <div class="form-row">
                             <div class="col-12 form-group">
-                                <label for="managerID">Manager ID</label>
-                                <input type="text" class="form-control" id="managerID" name="managerID"
+                                <label for="username">Manager ID</label>
+                                <input type="text" class="form-control" id="username" name="username"
                                     placeholder="Enter manager ID" required>
-                                <div class="error" id="errmanagerID"></div>
+                                <div class="error" id="errusername"></div>
                             </div>
                         </div>
 
@@ -71,8 +71,22 @@
     <footer>&#169 Bridget Akankunda 2020</footer>
 
     <!-- Linked Js files -->
-    <script src="/bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+    
     <script src="/js/loginValidation.js"></script>
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="/bootstrap/js/bootstrap.js"></script>
+    <script src="/bootstrap/js/popper.min.js"></script>
+    
+    <!-- js online -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

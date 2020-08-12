@@ -1,7 +1,7 @@
 // Defining a function to display error message
-function printError(elemId, hintMsg) {
-    document.getElementById(elemId).innerHTML = hintMsg;
-}
+// function printError(elemId, hintMsg) {
+//     document.getElementById(elemId).innerHTML = hintMsg;
+// }
 const loginForm = document.querySelector('#loginForm')
 loginForm.addEventListener('submit', (event) => {
 
@@ -18,7 +18,7 @@ loginForm.addEventListener('submit', (event) => {
             if (employeeID == "") {
                 printError("erremployeeID", "Please enter your employeeID");
             } else {
-                var regex = /^[a-zA-Z\s]+$/;
+                var regex = /^[1-9]\d{4}$/;
                 if (regex.test (employeeID) === false) {
                     printError("erremployeeID", "Please enter a valid employeeID");
                 } else {

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration panel</title>
+    <link rel="stylesheet" href="/bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <img width=80vh;,height=100vh; src="/images/covid.jpg" alt="" class="logo">
+        <a style="color:rgb(218, 100, 32);font-weight: bolder; font-size: xxx-large; font-family: inherit;"
+            class="nav-link" class="navbar-brand" href="/views/login.html">Covid Stores</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <div style="margin-left: auto; color:rgb(218, 100, 32);">
+                <a style="background-color: grey; color: rgb(218, 100, 32);" class="btn btn-dark" href="/homePage"
+                    role="button">Signout</a>
+
+    </nav>
+    <!-- Navbar -->
+    <br>
+    <h4 style="color: black; font-weight: bolder;">Administration Panel</h4>
+    <div style="padding-top: 50px;" class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card border-secondary mb-3" style="max-width: 26rem;">
+                    <div class="card-body">
+                        <img src="/images/personicon.png" , style="width:20%; height:20%" class="card-img-top"
+                            alt="...">
+                        <h5 class="card-title">Register Agent</h5>
+                        <a href="/agentReg" style="background-color: rgb(218, 100, 32); color:black;"
+                            class="btn btn-outline-secondary">Register</a>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="col-md-6">
+                <div class="card border-secondary mb-3" style="max-width: 26rem;">
+                    <div class="card-body">
+                        <img src="/images/products.png" , style="width:20%; height:20%" class="card-img-top" alt="...">
+                        <h5 class="card-title">Add item</h5>
+                        <a href="/itemReg" class="btn btn-outline-secondary"
+                            style="background-color: rgb(218, 100, 32); color: black;">Add</a>
+                    </div>
+                </div>
+            </div>
+
+
+           
+            <div class="col-md-6">
+                <div class="card border-secondary mb-3" style="max-width: 26rem;">
+                    <div class="card-body">
+                        <img src="/images/itemslist.png" , style="width:20%; height:20%" class="card-img-top" alt="...">
+                        <h5 class="card-title">View items</h5>
+                        <a href="/itemsPage" class="btn btn-outline-secondary"
+                            style="background-color: rgb(218, 100, 32); color: black;">Items list</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card border-secondary mb-3" style="max-width: 26rem;">
+                    <div class="card-body">
+                        <img src="/images/manager.png" , style="width:20%; height:20%" class="card-img-top" alt="...">
+                        <h5 class="card-title">Add new manager</h5>
+                        <a href="/managerReg" class="btn btn-outline-secondary"
+                            style="background-color: rgb(218, 100, 32); color: black;">Add</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div style="margin-left: 30%; width: 50px;" class="col-sm-12">
+                <div class="card border-secondary mb-3" style="max-width: 26rem;">
+                    <div class="card-body">
+                        <img src="/images/washing-hands.svg" , style="width:20%; height:20%" class="card-img-top" alt="...">
+                        <img src="/images/mask.svg" , style="width:20%; height:20%" class="card-img-top" alt="...">
+                        <p style="color: black; font-weight: bolder;" >Wash your hands with soap or sanitize more often to stop the spread of corona virus.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        
+
+        
+    </div>
+    <footer class="fixed-bottom" style="color: white; background-color: rgb(6,6,22); text-align: center;">@copyright
+        Bridget Akankunda</footer>
+
+    <!-- js online -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="/js/customerRegValidation.js"></script>
+
+</body>
+
+</html>

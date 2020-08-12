@@ -7,8 +7,19 @@ head
     link(rel='stylesheet' href='/css/styles.css')
     
     body
+        nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+            img.logo(width="80vh;,height=100vh;" src="/images/covid.jpg" alt="")
+            a.nav-link(style="color:rgb(218, 100, 32);font-weight: bolder; font-size: xxx-large; font-family: inherit;" href="/views/login.html") Covid Stores
+            button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+                span.navbar-toggler-icon
+            #navbarSupportedContent.collapse.navbar-collapse
+              ul.nav.nabar-nav.ml-auto
+                    li
+                        a(href="/customerReg" style="color:white;") Add new customer
+                    li  
+            #navbarSupportedContent.collapse.navbar-collapse
+                    a.btn.btn-secondary(style="margin-left: auto;" href="/homePage" role="button") Sign out
 
-        br
         br
         h2 Available Customers
         br
@@ -21,7 +32,7 @@ head
                     th(scope='col') Surname
                     th(scope='col') Phone Number
                     th(scope='col') Physical Address
-                    th(scope='col')
+                    th(scope='col') Email
                     th(scope='col')
                     th(scope='col')
             tbody
@@ -30,11 +41,10 @@ head
                         td #{customer.firstName}
                         td #{customer.surName}
                         td #{customer.phoneNumber}
-                        td #{customer.address} 
+                        td #{customer.address}
+                        td #{customer.email}  
                         td(colspan="2")
-                            //- form(method="post" action='/updating')
-                            //-     input(type="hidden" name="id"  value=customer._id)
-                            //-     button.btn.btn-dark.btn-block(type="submit") Update
+                           
                         td
                             form(method="post" action='/delete')
                                 input(type="hidden" name="id" value=customer._id)
@@ -44,3 +54,10 @@ head
         div#footer
             footer
                 |  Covid-Stores &copy;2020
+
+
+    script(src="/bootstrap-4.5.0-dist/js/bootstrap.min.js")
+    script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous")
+    script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous")
+

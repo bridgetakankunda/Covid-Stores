@@ -1,21 +1,25 @@
 const mongoose = require('mongoose')
 const passportLocalMongoose = require('passport-local-mongoose');
 
-var agentSchema = new mongoose.Schema({
+var employeeSchema = new mongoose.Schema({
     firstName: String,
     surName: String,
     phoneNumber: Number,
     email: String,
     address: String,
     nin: String,
-    employeeID: {
+    username: {
         type: String,
-        active: false
+        active: false,
+        required: true,
+        unique : true
     },
-    password: String,
+    password: {
+        type: String,
+        required: true,
+        unique: true
+    }
 })
 
-agentSchema.plugin(passportLocalMongoose, {
-    usernameField: 'employeeID'
-});
-module.exports = mongoose.model("Agent", agentSchema)
+employeeSchema.plugin(passportLocalMongoose, { usernameField: 'username' });
+module.exports = mongoose.model("Employee", employeeSchema)
