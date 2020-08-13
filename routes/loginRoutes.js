@@ -155,7 +155,7 @@ router.post("/delete", async (req, res) => {
   }
 })
 
-  router.post("/deleteagent", async (req, res) => {
+  router.post("/deleteemployee", async (req, res) => {
     try {
       await Employee.deleteOne({ _id: req.body.id })
       res.redirect('back')

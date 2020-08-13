@@ -8,14 +8,14 @@
     // Retrieving the values of form elements
     var firstName = document.managerReg.firstName.value;
     var surName = document.managerReg.surName.value; 
-    var managerID = document.managerReg.managerID.value;
+    var username = document.managerReg.username.value;
     var phoneNumber = document.managerReg.phoneNumber.value;   
     var password = document.managerReg.password.value;
     var email = document.managerReg.email.value;
     var nin = document.managerReg.nin.value;
 
     // Defining error variables with a default value
-    var errfirstName = errsurName = erremail = errmanagerID = errphoneNumber = errpassword = errnin = true;
+    var errfirstName = errsurName = erremail = errusername = errphoneNumber = errpassword = errnin = true;
 
         // Validate name
         if (firstName == "") {
@@ -45,15 +45,15 @@
 
 
         // Validate employee Id
-        if (managerID == "") {
-            printError("errmanagerID", "Please enter your managerID");
+        if (username == "") {
+            printError("errmanagerID", "Please enter a valid manager ID");
         } else {
             var regex = /^[1-9]\d{4}$/;
-            if (regex.test(managerID) === false) {
-                printError("errmanagerID", "Please enter a valid managerID");
+            if (regex.test(username) === false) {
+                printError("errmanagerID", "Please enter a valid manager ID");
             } else {
-                printError("errmanagerID", "");
-                errmanagerID = false;
+                printError("errusername", "");
+                errusername = false;
             }
         }
 
@@ -115,7 +115,7 @@
             }
         }
         // Prevent the form from being submitted if there are any errors
-        if ((errfirstName || errsurName || erremail || errmanagerID ||errphoneNumber || errpassword || errnin) == true) {
+        if ((errfirstName || errsurName || erremail || errusername ||errphoneNumber || errpassword || errnin) == true) {
             event.preventDefault();
 
         } else {

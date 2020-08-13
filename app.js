@@ -15,9 +15,6 @@ const bodyParser = require('body-parser')
 //importing files to be used ,assigning them to a variable 
 const loginRoutes = require('./routes/loginRoutes');
 const Employee = require('./models/salesAgentModel')
-const Manager = require('./models/Manager')
-// const { Agent } = require('http');
-
 
 // Database connection
 //Method mongoose takes on a prperty(connect),two parameters ie end point of our database ,defines callback functions.
@@ -58,15 +55,7 @@ passport.serializeUser(Employee.serializeUser());
 passport.deserializeUser(Employee.deserializeUser());
 
 const LocalStrategy = require('passport-local').Strategy;
-passport.use(new LocalStrategy(Employee.authenticate())); 
-
-// Manager Authentication
-passport.use(Manager.createStrategy());
-passport.serializeUser(Manager.serializeUser());
-passport.deserializeUser(Manager.deserializeUser());
-
-const managerStrategy = require('passport-local').Strategy;
-passport.use(new managerStrategy(Manager.authenticate())); 
+passport.use(new LocalStrategy(Employee.authenticate()));
 
 app.use('/', loginRoutes)  //routes are in the login routes which commence with / end point.
 

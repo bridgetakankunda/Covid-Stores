@@ -7,23 +7,23 @@ login_admin.addEventListener('submit', (event) => {
 
 
 // Retrieving the values of form elements
-var managerID = document.adminLoginForm.managerID.value;
+var username = document.adminLoginForm.username.value;
 var password = document.adminLoginForm.password.value;
 
 
 // Defining error variables with a default value
-    var errmanagerID = errpassword = true;
+    var errusername = errpassword = true;
 
     // Validate name
-    if (managerID == "") {
-        printError("erremanagerID", "Please enter your managerID");
+    if (username == "") {
+        printError("errusername", "Please enter your manager ID");
     } else {
     var regex = /^[1-9]\d{4}$/;
-    if (regex.test (managerID) === false) {
-        printError("errmanagerID", "Please enter a valid managerID");
-    } else {
-        printError("errmanagerID", "");
-        erremployeeID = false;
+    if (regex.test (username) === false) {
+        printError("errmanagerID", "Please enter a valid manager ID");
+    } else{
+        printError("erruser", "");
+        errusername = false;
      }
     }
 
@@ -42,7 +42,7 @@ var password = document.adminLoginForm.password.value;
     }
     }
     // Prevent the form from being submitted if there are any errors
-    if ((errmanagerID || errpassword ) == true) {
+    if ((errusername || errpassword ) == true) {
         event.preventDefault()
 
     } else {
